@@ -20,6 +20,16 @@ namespace Loja_Web_services.Entidade.Entidade
         public float ValorTotal { get; set; }
 
         [DataMember]
-        public IList<Produto> Produtos { get; set; }
+        public IList<NotaFicalProduto> Produtos = new List<NotaFicalProduto>();
+
+        public NotaFiscal()
+        {
+            this.Produtos = new List<NotaFicalProduto>();
+        }
+
+        public void AddProduct(Produto produto)
+        {
+            Produtos.Add(new NotaFicalProduto() { Produto = produto});
+        }
     }
 }

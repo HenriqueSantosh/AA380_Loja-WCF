@@ -10,30 +10,43 @@ using static AAA380_Loja_Web_services.DataContract.Media;
 
 namespace AAA380_Loja_Web_services
 {
-    // OBSERVAÇÃO: Você pode usar o comando "Renomear" no menu "Refatorar" para alterar o nome da interface "IService1" no arquivo de código e configuração ao mesmo tempo.
+    
     [ServiceContract]
-    public interface IService1
+    public interface IWebService
     {
         [OperationContract]
-        bool SaveProduto(Produto p);
+        bool SaveOrUpdateProduto(Produto product);
 
+    
         [OperationContract]
-        bool UpdateProduto(Produto p);
-
-        [OperationContract]
-        bool SaveNota(Produto p);
-
-        [OperationContract]
-        bool UpdateNota(Produto p);
+        bool SaveOrUpdateNota(NotaFiscal nota);
 
         [OperationContract]
         bool DeleteProduto(int id);
-       
+
+        [OperationContract]
+        bool DeleteNota(int id);
+
+        [OperationContract]
+        Produto GetProdutoByID(int id);
+
+        [OperationContract]
+        IList<Produto> GetProdutoByNameDESc(string nome,string descricao);
+
         [OperationContract]
         IList<Produto> GetProdutos();
 
         [OperationContract]
         IList<NotaFiscal> GetNotas();
+
+        [OperationContract]
+        NotaFiscal AddGridProduct(Produto produto, NotaFiscal notaFiscal);
+
+        [OperationContract]
+        NotaFiscal RemoveProduct(int id, NotaFiscal notaFiscal);
+
+        [OperationContract]
+        double SumPrice(NotaFiscal notaFiscal);
 
     }
 

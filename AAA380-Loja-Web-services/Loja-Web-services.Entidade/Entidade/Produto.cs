@@ -22,6 +22,14 @@ namespace Loja_Web_services.Entidade.Entidade
 
         [DataMember]
         public double Preco { get;  set; }
-     
+
+        [DataMember]
+        public IList<NotaFicalProduto> Produtos { get; set; }
+
+        public Produto()
+        {
+            Produtos = new List<NotaFicalProduto>();
+        }
+
     }
 }

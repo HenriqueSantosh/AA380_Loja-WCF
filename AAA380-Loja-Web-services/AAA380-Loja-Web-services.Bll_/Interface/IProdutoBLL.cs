@@ -7,17 +7,9 @@ using Loja_Web_services.Entidade.Entidade;
 
 namespace AAA380_Loja_Web_services.Bll_.Interface
 {
-    public interface IProdutoBLL
+    public interface IProdutoBLL : IRepositoryBLL<Produto>
     {
-
-        bool DeleteProduto(int ID);
-
-        bool SaveProduto(Produto produto);
-
-        bool UpdateProduto(Produto produto);
-
-        IList<Produto> GetProdutos();
-
-
-      }
+        Produto GetProdutoByID(int id);
+        IList<Produto> GetProdutoByNameDESc(string nome, string descricao);
+    }
 }

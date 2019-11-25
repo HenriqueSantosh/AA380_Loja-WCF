@@ -43,15 +43,18 @@
   <ItemGroup>
     <Compile Include="BLL\NotaBLL.cs" />
     <Compile Include="BLL\ProdutoBLL.cs" />
+    <Compile Include="BLL\SellProductBLL.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Interface\INotaBLL.cs" />
     <Compile Include="Interface\IProdutoBLL.cs" />
+    <Compile Include="Interface\IRepositoryBLL.cs" />
+    <Compile Include="Interface\ISellProductBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AAA380-Loja-Web-services.DAO\AAA380-Loja-Web-services.DAO.csproj">
-      <Project>{DC747217-5F29-42CF-BA52-711B50E5C69E}</Project>
-      <Name>AAA380-Loja-Web-services.DAO</Name>
+    <ProjectReference Include="..\..\..\..\..\..\Users\HENRIQUE\Source\Repos\Loja-Web-DAO\Loja-Web-DAO\Loja-Web-DAO.csproj">
+      <Project>{cc73e1bd-18e8-428e-a390-c12346784acf}</Project>
+      <Name>Loja-Web-DAO</Name>
     </ProjectReference>
     <ProjectReference Include="..\AAA380-Loja-Web-services.Interfaces\AAA380-Loja-Web-services.Interfaces.csproj">
       <Project>{afe4d4f4-691a-40d3-9420-bcff9b2dcb4a}</Project>
@@ -61,6 +64,9 @@
       <Project>{BCEE6662-AF2A-4B59-AC8D-3A1659B3AD3E}</Project>
       <Name>Loja-Web-services.Entidade</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
